@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTIPATION 💀 - The Final Battle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe5b4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+        h1 {
+            font-size: 3.5em;
+            text-shadow: 3px 3px 5px #ff4d4d;
+        }
+        .poop-container {
+            position: relative;
+            display: inline-block;
+        }
+        .poop-animation {
+            font-size: 5em;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: poopDrop 3s infinite ease-in-out;
+        }
+        @keyframes poopDrop {
+            0% { top: 0; }
+            50% { top: 30px; }
+            100% { top: 0; }
+        }
+        .toilet {
+            font-size: 5em;
+            margin-top: 60px;
+        }
+        .image-container img {
+            width: 250px;
+            margin: 20px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% { filter: brightness(1); }
+            100% { filter: brightness(1.5); }
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: shake 1.5s infinite;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+        .meter {
+            margin: 20px auto;
+            width: 80%;
+            height: 20px;
+            background: lightgray;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background: green;
+            transition: width 1s, background 1s;
+        }
+        .toilet-rolls {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 3em;
+            animation: rollRotate 6s infinite linear;
+        }
+        @keyframes rollRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CONSTIPATION 💀</h1>
+        <p>The Battle of the Bowl Begins!</p>
+
+        <div class="poop-container">
+            <div class="poop-animation">💩</div>
+        </div>
+        <div class="toilet">🚽</div>
+
+        <h2>How Stuck Are You?</h2>
+        <input type="range" min="0" max="100" value="0" id="constipation-meter">
+        <div class="meter">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+
+        <h2>Your Only Hope</h2>
+        <div class="image-container">
+            <img src="https://i.ibb.co.com/wNCnC7L0/Dulcolax-Tablet-Front-NEW.webp" alt="Constipation Savior">
+        </div>
+
+        <button class="button" onclick="getHelp()">💩 End the Struggle 💩</button>
+
+        <p id="message"></p>
+        
+        <div class="toilet-rolls">🧻</div>
+    </div>
+
+    <audio id="poop-sound">
+        <source src="https://www.myinstants.com/media/sounds/fart-with-extra-reverb.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="footer">
+        Made with 💩 by Choronus Sparrow
+    </div>
+
+    <script>
+        const meter = document.getElementById("constipation-meter");
+        const progressBar = document.getElementById("progress-bar");
+        const poopSound = document.getElementById("poop-sound");
+
+        meter.addEventListener("input", function() {
+            let value = this.value;
+            progressBar.style.width = value + "%";
+
+            if (value < 30) {
+                progressBar.style.background = "green";
+            } else if (value < 70) {
+                progressBar.style.background = "yellow";
+            } else {
+                progressBar.style.background = "red";
+            }
+        });
+
+        function getHelp() {
+            poopSound.play();
+            document.getElementById("message").innerText = "It's happening... prepare yourself 💩🔥";
+        }
+    </script>
+
+</body>
+</html>
